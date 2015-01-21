@@ -12,7 +12,7 @@ de =
   updateYourPassword: "Passwort aktualisieren"
   password: "Passwort"
   usernameOrEmail: "Benutzername oder E-Mail"
-  email: "E-Mail"
+  email: "E-Mail-Adresse"
   ifYouAlreadyHaveAnAccount: "Falls Sie ein Konto haben, bitte hier"
   signUpWithYourEmailAddress: "Mit E-Mail registrieren"
   username: "Benutzername"
@@ -24,8 +24,9 @@ de =
   sign: "Anmelden"
   configure: "Konfigurieren"
   with: "mit"
-  createAccount: "Konto erzeugen"
+  createAccount: "leg jetzt dein Konto an"
   and: "und"
+  ssl: "Schnell & sicher: Sichere Datenübertragung durch SSL - Verschlüsselung"
 
   error:
     minChar: "Passwort muss mindesten 7 Zeichen lang sein."

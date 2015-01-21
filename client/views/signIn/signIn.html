@@ -1,31 +1,23 @@
 <template name='entrySignIn'>
   <div class="container">
     <div class="row">
+      <div class="sign-in-top">
       {{#if logo}}
         <div class="entry-logo">
-            <a href="/"><img src="{{logo}}" alt="logo"></a>
+          <a href="/"><img src="{{logo}}" alt="logo"></a>
         </div>
       {{/if}}
+      {{#if showCreateAccountLink}}
+      <p class="entry-signup-cta">{{t9n "dontHaveAnAccount"}} <a href="{{pathFor 'entrySignUp'}}">{{t9n "signUp"}}</a></p>
+      <div class="break-line"></div>
+      {{/if}}
+      </div>
       <div class="entry col-md-4 col-md-offset-4">
-        {{#if otherLoginServices}}
-        <div class="entry-social">
-          {{#each loginServices}}
-            {{> entrySocial}}
-          {{/each}}
-          {{#if passwordLoginService}}
-          <div class="email-option">
-            <strong class="line-thru or-sign-in">{{t9n "OR"}}</strong>
-          </div>
-          {{/if}}
-        </div>
-        {{/if}}
         {{> entryError}}
-        {{#unless otherLoginServices}}
+        {{#if passwordLoginService}}
           <div class="email-option">
             <h3>{{t9n "signIn"}}</h3>
           </div>
-        {{/unless}}
-        {{#if passwordLoginService}}
           <form class="entry-form" id='signIn'>
             <div class="form-group">
               <input autofocus name="email" type="{{emailInputType}}" class="form-control" value='{{email}}' placeholder="{{emailPlaceholder}}">
@@ -38,9 +30,22 @@
               <button type="submit" class="submit btn btn-block btn-default">{{t9n "signIn"}}</button>
             {{/unless}}
           </form>
+          <div class="break-line"></div>
         {{/if}}
-        {{#if showCreateAccountLink}}
-        <p class="entry-signup-cta">{{t9n "dontHaveAnAccount"}} <a href="{{pathFor 'entrySignUp'}}">{{t9n "signUp"}}</a></p>
+        {{#if otherLoginServices}}
+        <div class="entry-social">
+          {{#each loginServices}}
+            {{> entrySocial}}
+          {{/each}}
+        </div>
+        <div class="break-line"></div>
+        {{/if}}
+        {{#if ssl}}
+        <div class="ssl-certificate">{{t9n "ssl"}}</div>
+        <div class="break-line"></div>
+        {{/if}}
+        {{#if footerMenu}}
+          {{> entrySignInFooterNav}}
         {{/if}}
       </div>
     </div>
