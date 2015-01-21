@@ -1,6 +1,6 @@
 Package.describe({
     summary: "Make signin and signout their own pages with routes.",
-    version: '1.0.3',
+    version: '1.0.3.1',
     name: "ansyg:accounts-entry",
     githubUrl: 'https://github.com/andrew-sygyda/accounts-entry',
 });

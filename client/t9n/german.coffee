@@ -7,7 +7,7 @@ de =
   forgotPassword: "Passwort vergessen?"
   emailAddress: "E-Mail Adresse"
   emailResetLink: "Senden"
-  dontHaveAnAccount: "Noch kein Konto?"
+  dontHaveAnAccount: "Neues Konto anlegen"
   resetYourPassword: "Passwort zurücksetzen"
   updateYourPassword: "Passwort aktualisieren"
   password: "Passwort"
